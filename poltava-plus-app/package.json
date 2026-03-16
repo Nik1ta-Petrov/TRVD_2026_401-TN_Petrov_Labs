@@ -13,10 +13,12 @@
     "@prisma/client": "^7.5.0",
     "@radix-ui/react-slot": "^1.2.4",
     "@studio-freight/react-lenis": "^0.0.47",
+    "bcryptjs": "^3.0.3",
     "bootstrap-icons": "^1.13.1",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "framer-motion": "^12.35.1",
+    "jose": "^6.2.1",
     "lucide-react": "^0.577.0",
     "motion": "^12.35.2",
     "next": "16.1.6",
@@ -27,6 +29,7 @@
     "tailwind-merge": "^3.5.0"
   },
   "devDependencies": {
+    "@types/bcryptjs": "^2.4.6",
     "@types/node": "^20",
     "@types/pg": "^8.18.0",
     "@types/react": "^19",

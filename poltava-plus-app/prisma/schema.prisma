@@ -7,6 +7,19 @@ datasource db {
   provider = "postgresql"
 }
 
+enum Role {
+  USER
+  ADMIN
+}
+
+model User {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  password  String   // Тут буде зберігатися хеш
+  role      Role     @default(USER)
+  createdAt DateTime @default(now())
+}
+
 model Subscription {
   id              String   @id @default(cuid())
   telegramId      String   @unique
