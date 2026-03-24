@@ -141,3 +141,88 @@
 .subscribeBtn:active {
   transform: translateY(0);
 }
+
+
+
+.authBlock {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-left: 10px;
+}
+
+.userEmail {
+    font-size: 13px;
+    color: #a0aec0;
+    max-width: 150px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.loginBtn {
+    background-color: #3b6b98;
+    color: white;
+    padding: 6px 16px;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: background 0.2s;
+}
+
+.logoutBtn {
+    background-color: #e53e3e;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-size: 13px;
+    cursor: pointer;
+    border: none;
+}
+
+.logoutBtn:hover {
+    background-color: #c53030;
+}
+
+.authBlock {
+  display: flex;
+  align-items: center;
+}
+
+.guestLinks {
+  display: flex;
+  gap: 10px; 
+  align-items: center;
+}
+
+.userSection {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.registerBtn {
+  background-color: #656565;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+}
+
+.registerBtn:hover {
+  background-color: #1e1e1e;
+  transform: translateY(-1px);
+}
+
+.loginBtn {
+  color: #e5e5e5;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.loginBtn:hover {
+  color: white;
+}

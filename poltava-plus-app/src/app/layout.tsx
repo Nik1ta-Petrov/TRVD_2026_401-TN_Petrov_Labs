@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { SmoothScroll } from "@/components/layout/SmoothScroll"; 
+import { AuthProvider } from "@/context/AuthContext"; 
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "./globals.css";
 
@@ -18,15 +19,17 @@ export default function RootLayout({
   return (
     <html lang="uk">
       <body>
-        <SmoothScroll>
-          <Header />
-          <div className="min-h-screen flex flex-col">
-              <main className="flex-grow">
-                  {children}
-              </main>
-              <Footer /> 
-          </div>
-        </SmoothScroll>
+        <AuthProvider>
+          <SmoothScroll>
+            <Header />
+            <div className="min-h-screen flex flex-col">
+                <main className="flex-grow">
+                    {children}
+                </main>
+                <Footer /> 
+            </div>
+          </SmoothScroll>
+        </AuthProvider>
       </body>
     </html>
   );
