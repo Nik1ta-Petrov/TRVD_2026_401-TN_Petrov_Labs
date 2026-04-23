@@ -2,6 +2,32 @@
 @tailwind components;
 @tailwind utilities;
 
+
+@theme inline {
+  --color-destructive-foreground: var(--destructive-foreground);
+}
+
+:root {
+  --destructive-foreground: oklch(1 0 0);
+  
+  /* Shadcn / PoltavaPlus Colors */
+  --primary: oklch(0.210 0.006 285.885);
+  --primary-foreground: oklch(0.985 0.001 106.423);
+  --secondary: oklch(0.967 0.003 264.542);
+  --secondary-foreground: oklch(0.210 0.006 285.885);
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.145 0.004 285.823);
+  --input: oklch(0.926 0.001 264.531);
+  --ring: oklch(0.707 0.022 261.325);
+}
+
+.dark {
+  --destructive-foreground: oklch(1 0 0);
+  --primary: oklch(0.985 0.001 106.423);
+  --primary-foreground: oklch(0.210 0.006 285.885);
+}
+
+/* 3. ШРИФТИ */
 @font-face {
   font-family: "MontserratLocal";
   src: url("/fonts/montserrat.ttf") format("truetype"); 
@@ -34,6 +60,7 @@
   font-display: swap;
 }
 
+/* 4. ГЛОБАЛЬНІ СТИЛІ */
 * {
   box-sizing: border-box;
   padding: 0;

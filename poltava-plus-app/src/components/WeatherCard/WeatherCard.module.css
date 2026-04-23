@@ -1,0 +1,128 @@
+.wrapper {
+    max-width: 1000px;
+    margin: 20px auto;
+    /* Liquid Glass Effect (з Кроку 32) */
+    background: rgba(255, 255, 255, 0.03); 
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    
+    color: #fff;
+    padding: 30px;
+    border-radius: 32px; /* Більш круглі кути, як на Sinoptik */
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+/* СЕЛЕКТОР ДНІВ */
+.daySelector {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+    gap: 15px;
+    margin-bottom: 35px;
+}
+
+.dayCard {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 20px 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 24px; /* Круглі картки */
+}
+
+.dayCard:hover {
+    background: rgba(255, 255, 255, 0.12);
+    transform: translateY(-5px);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.activeDay {
+    background: #fff !important;
+    border-color: #fff;
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
+}
+
+.activeDay .dayWeek, 
+.activeDay .dayDate, 
+.activeDay .max, 
+.activeDay .min { color: #000; }
+
+.dayWeek { font-size: 11px; text-transform: uppercase; color: #888; font-weight: 700; letter-spacing: 1px; }
+.dayDate { font-size: 19px; font-weight: 800; margin: 6px 0; }
+
+.iconBox { margin: 10px 0; }
+
+.dayTemps { display: flex; gap: 8px; margin-top: 10px; font-size: 14px; }
+.max { font-weight: 800; }
+.min { color: #666; }
+
+/* ТАБЛИЦЯ ПОГОДИ */
+.detailContainer {
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 24px;
+    overflow: hidden;
+}
+
+.weatherTable {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 700px;
+}
+
+.weatherTable th {
+    background: rgba(255, 255, 255, 0.03);
+    color: #555;
+    font-size: 10px;
+    text-transform: uppercase;
+    padding: 20px;
+    letter-spacing: 1px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.weatherTable td {
+    padding: 18px;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.02);
+    font-size: 14px;
+    color: #eee;
+}
+
+.timeCell { font-weight: 700; color: #888; }
+.tempCell { font-size: 17px; font-weight: 800; color: #fff; }
+.feelsCell { color: #555; font-size: 13px; }
+
+/* --- ДОДАТКОВІ СТИЛІ ДЛЯ ІКОНОК (з Кроку 35 та Кроку 45) --- */
+.weatherIcon {
+    font-size: 2.5rem; 
+    color: #fff;
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.3));
+}
+
+.weatherIconTable {
+    font-size: 1.5rem; 
+    color: #fff;
+}
+
+/* Виправлення іконки на активному (білому) дні: робимо її чорною */
+.activeDay .weatherIcon {
+    color: #000 !important;
+    filter: none !important;
+    opacity: 0.9;
+}
+
+/* Іконка вологості блакитна (з Кроку 45) */
+.iconLabel i {
+    color: #00d2ff; /* Блакитний колір для води */
+    margin-right: 5px;
+    vertical-align: middle;
+    filter: drop-shadow(0 0 5px rgba(0, 210, 255, 0.4));
+}
+
+.loading { text-align: center; padding: 100px; color: #444; text-transform: uppercase; letter-spacing: 4px; animation: blink 2s infinite; }
+@keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }

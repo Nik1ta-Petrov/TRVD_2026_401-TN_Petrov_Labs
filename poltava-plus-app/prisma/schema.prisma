@@ -23,11 +23,11 @@ model User {
 
 model Subscription {
   id              String   @id @default(cuid())
-  telegramId      String   @unique
-  username        String?
-  groupNumber     Int?     
-  subscribeOutage Boolean  @default(false) 
-  subscribeAlert  Boolean  @default(false) 
+  telegramId      String
+  groupNumber     Int
+  subscribeOutage Boolean  @default(true)
+  subscribeAlert  Boolean  @default(false)
   createdAt       DateTime @default(now())
-  updatedAt       DateTime @updatedAt
+  
+  userEmail       String   
 }
