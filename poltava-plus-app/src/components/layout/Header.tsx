@@ -6,6 +6,9 @@ import { usePathname } from "next/navigation";
 import styles from "./Header.module.css";
 import { useAuth } from "@/context/AuthContext";
 
+// ТЕПЕР ІМПОРТУЄМО ПРАВИЛЬНО (з тієї ж папки layout)
+import { Button } from "./button";
+
 function getWeatherIcon(code: number | null, isDay: number | null) {
     if (code === null) return "bi-cloud";
     if (code === 0)
@@ -60,12 +63,11 @@ export default function Header() {
 
                 if (poltavaKey) {
                     const stateData = targetObj[poltavaKey];
-
                     if (typeof stateData === "object" && stateData !== null) {
-                        const activeAlert =
+                        setIsAlert(
                             stateData.alertnow === true ||
-                            stateData.enabled === true;
-                        setIsAlert(activeAlert);
+                                stateData.enabled === true,
+                        );
                     } else {
                         setIsAlert(!!stateData);
                     }
@@ -146,7 +148,7 @@ export default function Header() {
                                     marginRight: "6px",
                                     boxShadow: "0 0 8px rgba(239, 68, 68, 0.6)",
                                 }}
-                            ></span>{" "}
+                            ></span>
                             Тривога!
                         </span>
                     ) : (
@@ -161,33 +163,46 @@ export default function Header() {
                                     borderRadius: "50%",
                                     marginRight: "6px",
                                 }}
-                            ></span>{" "}
+                            ></span>
                             Немає тривоги
                         </span>
                     )}
                 </div>
-                
+
                 <div className={styles.authBlock}>
                     {user ? (
                         <div className={styles.userSection}>
                             <span className={styles.userEmail}>
                                 {user.email}
                             </span>
-                            <button
+                            <Button
                                 onClick={logout}
-                                className={styles.logoutBtn}
+                                variant="logout" // ТЕПЕР ВОНА БУДЕ ПОВНІСТЮ ЧЕРВОНОЮ
+                                size="sm"
+                                className="rounded-xl" // Можна додати кастомний радіус прямо тут
                             >
                                 Вихід
-                            </button>
+                            </Button>
                         </div>
                     ) : (
-                        <div className={styles.guestLinks}>
-                            <Link href="/login" className={styles.loginBtn}>
-                                Увійти
-                            </Link>
-                            <Link href="/register" className={styles.registerBtn}>
-                                Реєстрація
-                            </Link>
+                        <div className="flex items-center gap-3">
+                            <Button
+                                asChild
+                                variant="default"
+                                size="sm"
+                                className="rounded-full bg-white text-black hover:bg-neutral-200"
+                            >
+                                <Link href="/login">Увійти</Link>
+                            </Button>
+
+                            <Button
+                                asChild
+                                variant="outline"
+                                size="sm"
+                                className="rounded-full border-white/20 bg-transparent text-white hover:bg-white/10"
+                            >
+                                <Link href="/register">Реєстрація</Link>
+                            </Button>
                         </div>
                     )}
                 </div>

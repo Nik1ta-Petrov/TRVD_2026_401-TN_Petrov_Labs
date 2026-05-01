@@ -13,14 +13,15 @@ interface NewsItem {
     imageUrl: string;
 }
 
-export function NewsSection() {
+export function NewsSection({ limit = 6 }: { limit?: number }) {
     const [news, setNews] = useState<NewsItem[]>([]);
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         const fetchNews = async () => {
             try {
-                const response = await fetch("/api/news");
+                // Додаємо параметр limit у запит до твого API
+                const response = await fetch(`/api/news?limit=${limit}`);
                 const data = await response.json();
                 if (!data.error) setNews(data);
             } catch (error) {
@@ -30,7 +31,7 @@ export function NewsSection() {
             }
         };
         fetchNews();
-    }, []);
+    }, [limit]); // Додаємо limit у масив залежностей
 
     if (loading) {
         return (
@@ -51,17 +52,6 @@ export function NewsSection() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {news.map((item, index) => (
-                    // <motion.a
-                    //     href={item.link}
-                    //     target="_blank"
-                    //     rel="noopener noreferrer"
-                    //     key={index}
-                    //     initial={{ opacity: 0, y: 20 }}
-                    //     whileInView={{ opacity: 1, y: 0 }}
-                    //     viewport={{ once: true }}
-                    //     transition={{ delay: index * 0.1, duration: 0.5 }}
-                    //     className="group relative h-[400px] w-full overflow-hidden rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300"
-                    // >
                     <motion.a
                         href={item.link}
                         target="_blank"
@@ -72,9 +62,8 @@ export function NewsSection() {
                         viewport={{
                             once: true,
                             margin: "-50px",
-                        }} 
+                        }}
                         transition={{ delay: index * 0.1, duration: 0.5 }}
-                        
                         className="group relative h-[400px] w-full overflow-hidden rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 will-change-transform"
                     >
                         <img
@@ -83,18 +72,10 @@ export function NewsSection() {
                             className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
                         />
 
-                        
-                        {/* <ProgressiveBlur
-                            className="pointer-events-none absolute bottom-0 left-0 h-[60%] w-full"
-                            blurIntensity={8}
-                        /> */}
-                        
                         <ProgressiveBlur
                             className="pointer-events-none absolute bottom-0 left-0 h-[60%] w-full"
                             blurIntensity={8}
-                            blurLayers={
-                                3
-                            } 
+                            blurLayers={3}
                         />
 
                         <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent pointer-events-none" />
