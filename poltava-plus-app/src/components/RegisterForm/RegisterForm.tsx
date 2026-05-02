@@ -53,11 +53,11 @@ export default function RegisterForm() {
 
             <form onSubmit={handleRegister} className={styles.form}>
                 <div className={styles.inputGroup}>
-                    <label className={styles.label}>Нікнейм</label>
+                    <label className={styles.label}>Логін</label>
                     <input
                         type="text"
                         className={styles.input}
-                        placeholder="yuki_044"
+                        placeholder="Введіть логін"
                         onChange={(e) => setUsername(e.target.value)}
                         required
                     />
@@ -68,7 +68,7 @@ export default function RegisterForm() {
                     <input
                         type="email"
                         className={styles.input}
-                        placeholder="mail@example.com"
+                        placeholder="example@mail.com"
                         onChange={(e) => setEmail(e.target.value)}
                         required
                     />
@@ -79,7 +79,7 @@ export default function RegisterForm() {
                     <input
                         type="password"
                         className={styles.input}
-                        placeholder="••••••••"
+                        placeholder="Введіть пароль"
                         onChange={(e) => setPassword(e.target.value)}
                         required
                     />

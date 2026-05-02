@@ -1,136 +1,136 @@
 .container {
-  min-height: 90vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #000000; 
-  padding: 40px;
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000000;
+    padding: 40px;
 }
 
 .card {
-  width: 100%;
-  max-width: 900px; 
-  background-color: #000000;
-  padding: 60px; 
-  border-radius: 20px;
-  border: 1px solid #262626; 
-  box-shadow: 0 0 40px rgba(255, 255, 255, 0.03); 
+    width: 100%;
+    max-width: 900px;
+    background-color: #000000;
+    padding: 60px;
+    border-radius: 20px;
+    border: 1px solid #262626;
+    box-shadow: 0 0 40px rgba(255, 255, 255, 0.03);
 }
 
 .title {
-  color: #ffffff;
-  font-size: 36px;
-  font-weight: 800;
-  text-align: center;
-  margin-bottom: 12px;
-  letter-spacing: -1px; 
+    color: #ffffff;
+    font-size: 36px;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 12px;
+    letter-spacing: -1px;
 }
 
 .subtitle {
-  color: #737373;
-  font-size: 16px;
-  text-align: center;
-  margin-bottom: 40px;
+    color: #737373;
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 40px;
 }
 
 .form {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
 }
 
 .inputGroup {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  width: 100%;
-  max-width: 600px;
-  margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 .inputGroup label {
-  font-size: 14px;
-  font-weight: 600;
-  color: #a3a3a3;
-  text-transform: uppercase; 
-  letter-spacing: 1px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #a3a3a3;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .input {
-  background-color: #0a0a0a;
-  border: 1px solid #262626;
-  border-radius: 8px;
-  padding: 16px 20px;
-  color: #ffffff;
-  font-size: 16px;
-  transition: all 0.3s ease;
+    background-color: #0a0a0a;
+    border: 1px solid #262626;
+    border-radius: 8px;
+    padding: 16px 20px;
+    color: #ffffff;
+    font-size: 15px;
+    transition: all 0.3s ease;
 }
 
 .input:focus {
-  outline: none;
-  border-color: #ffffff; 
-  background-color: #121212;
+    outline: none;
+    border-color: #ffffff;
+    background-color: #121212;
 }
 
 .button {
-  background-color: #ffffff; 
-  color: #000000;
-  padding: 18px;
-  border-radius: 8px;
-  font-weight: 700;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  margin-top: 15px;
-  width: 100%;
-  max-width: 600px;
-  margin: 15px auto 0;
-  text-transform: uppercase;
+    background-color: #ffffff;
+    color: #000000;
+    padding: 18px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 15px;
+    width: 100%;
+    max-width: 600px;
+    margin: 15px auto 0;
+    text-transform: uppercase;
 }
 
 .button:hover {
-  background-color: #e5e5e5;
-  transform: translateY(-2px);
+    background-color: #e5e5e5;
+    transform: translateY(-2px);
 }
 
 .button:active {
-  transform: translateY(0);
+    transform: translateY(0);
 }
 
 .button:disabled {
-  background-color: #262626;
-  color: #525252;
-  cursor: not-allowed;
+    background-color: #262626;
+    color: #525252;
+    cursor: not-allowed;
 }
 
 .error {
-  max-width: 600px;
-  margin: 10px auto;
-  color: #ffffff;
-  font-size: 14px;
-  text-align: center;
-  background: #450a0a; 
-  border-left: 4px solid #ef4444;
-  padding: 12px;
+    max-width: 600px;
+    margin: 10px auto;
+    color: #ffffff;
+    font-size: 14px;
+    text-align: center;
+    background: #450a0a;
+    border-left: 4px solid #ef4444;
+    padding: 12px;
 }
 
 .footer {
-  text-align: center;
-  margin-top: 32px;
-  color: #737373;
-  font-size: 15px;
+    text-align: center;
+    margin-top: 32px;
+    color: #737373;
+    font-size: 15px;
 }
 
 .link {
-  color: #ffffff;
-  text-decoration: underline;
-  text-underline-offset: 4px;
-  font-weight: 600;
-  margin-left: 5px;
-  transition: opacity 0.2s;
+    color: #ffffff;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    font-weight: 600;
+    margin-left: 5px;
+    transition: opacity 0.2s;
 }
 
 .link:hover {
-  opacity: 0.7;
+    opacity: 0.7;
 }

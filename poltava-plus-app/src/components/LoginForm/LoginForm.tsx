@@ -5,7 +5,7 @@ import { authService } from "@/services/authService";
 import { useRouter } from "next/navigation";
 import styles from "./LoginForm.module.css";
 import Link from "next/link";
-import { useAuth } from "@/context/AuthContext"; 
+import { useAuth } from "@/context/AuthContext";
 
 export default function LoginForm() {
     const [email, setEmail] = useState("");
@@ -14,7 +14,7 @@ export default function LoginForm() {
     const [loading, setLoading] = useState(false);
 
     const router = useRouter();
-    const { login } = useAuth(); 
+    const { login } = useAuth();
 
     const handleLogin = async (e: React.FormEvent) => {
         e.preventDefault();
@@ -25,9 +25,7 @@ export default function LoginForm() {
             const res = await authService.login({ email, password });
 
             if (res.token) {
-
                 login(res.token, { email: email });
-
             } else {
                 setError(res.error || "Невірний логін або пароль");
             }
@@ -43,7 +41,7 @@ export default function LoginForm() {
             <div className={styles.card}>
                 <h1 className={styles.title}>Вхід</h1>
                 <p className={styles.subtitle}>З поверненням у PoltavaPlus!</p>
-                
+
                 <form onSubmit={handleLogin} className={styles.form}>
                     <div className={styles.inputGroup}>
                         <label htmlFor="email">Email</label>
@@ -57,13 +55,13 @@ export default function LoginForm() {
                             required
                         />
                     </div>
-                    
+
                     <div className={styles.inputGroup}>
                         <label htmlFor="password">Пароль</label>
                         <input
                             id="password"
                             type="password"
-                            placeholder="••••••••"
+                            placeholder="Введіть пароль"
                             className={styles.input}
                             value={password}
                             onChange={(e) => setPassword(e.target.value)}

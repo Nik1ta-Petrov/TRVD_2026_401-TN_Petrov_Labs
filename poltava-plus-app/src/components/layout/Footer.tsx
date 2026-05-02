@@ -30,7 +30,6 @@ const footerLinks: FooterSection[] = [
         label: "Інформація",
         links: [
             { title: "Про проєкт", href: "/about" },
-            { title: "Мапа укриттів", href: "/shelters" },
             { title: "Контакти", href: "/contact" },
             { title: "Політика конфіденційності", href: "/privacy" },
         ],

@@ -2,75 +2,74 @@
 @tailwind components;
 @tailwind utilities;
 
-
 @theme inline {
-  --color-destructive-foreground: var(--destructive-foreground);
+    --color-destructive-foreground: var(--destructive-foreground);
 }
 
 :root {
-  --destructive-foreground: oklch(1 0 0);
-  
-  /* Shadcn / PoltavaPlus Colors */
-  --primary: oklch(0.210 0.006 285.885);
-  --primary-foreground: oklch(0.985 0.001 106.423);
-  --secondary: oklch(0.967 0.003 264.542);
-  --secondary-foreground: oklch(0.210 0.006 285.885);
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0.004 285.823);
-  --input: oklch(0.926 0.001 264.531);
-  --ring: oklch(0.707 0.022 261.325);
+    --destructive-foreground: oklch(1 0 0);
+
+    /* Shadcn / PoltavaPlus Colors */
+    --primary: oklch(0.21 0.006 285.885);
+    --primary-foreground: oklch(0.985 0.001 106.423);
+    --secondary: oklch(0.967 0.003 264.542);
+    --secondary-foreground: oklch(0.21 0.006 285.885);
+    --background: oklch(1 0 0);
+    --foreground: oklch(0.145 0.004 285.823);
+    --input: oklch(0.926 0.001 264.531);
+    --ring: oklch(0.707 0.022 261.325);
 }
 
 .dark {
-  --destructive-foreground: oklch(1 0 0);
-  --primary: oklch(0.985 0.001 106.423);
-  --primary-foreground: oklch(0.210 0.006 285.885);
+    --destructive-foreground: oklch(1 0 0);
+    --primary: oklch(0.985 0.001 106.423);
+    --primary-foreground: oklch(0.21 0.006 285.885);
 }
 
 /* 3. ШРИФТИ */
 @font-face {
-  font-family: "MontserratLocal";
-  src: url("/fonts/montserrat.ttf") format("truetype"); 
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
+    font-family: "MontserratLocal";
+    src: url("/fonts/montserrat.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
-  font-family: "MontserratLocal";
-  src: url("/fonts/Montserrat-Medium.ttf") format("truetype");
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
+    font-family: "MontserratLocal";
+    src: url("/fonts/Montserrat-Medium.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
-  font-family: "MontserratLocal";
-  src: url("/fonts/Montserrat-SemiBold.ttf") format("truetype");
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
+    font-family: "MontserratLocal";
+    src: url("/fonts/Montserrat-SemiBold.ttf") format("truetype");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
-  font-family: "MontserratLocal";
-  src: url("/fonts/Montserrat-Bold.ttf") format("truetype");
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
+    font-family: "MontserratLocal";
+    src: url("/fonts/Montserrat-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
 }
 
 /* 4. ГЛОБАЛЬНІ СТИЛІ */
 * {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
 
 body {
-  font-family: "MontserratLocal", sans-serif;
-  font-weight: 600;
-  background-color: #121212; 
-  color: #ffffff;
-  min-height: 100vh;
+    font-family: "MontserratLocal", sans-serif;
+    font-weight: 600;
+    background-color: #000000;
+    color: #ffffff;
+    min-height: 100vh;
 }

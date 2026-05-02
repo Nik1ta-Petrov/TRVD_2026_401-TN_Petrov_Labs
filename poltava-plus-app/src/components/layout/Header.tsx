@@ -177,9 +177,9 @@ export default function Header() {
                             </span>
                             <Button
                                 onClick={logout}
-                                variant="logout" // ТЕПЕР ВОНА БУДЕ ПОВНІСТЮ ЧЕРВОНОЮ
+                                variant="logout"
                                 size="sm"
-                                className="rounded-xl" // Можна додати кастомний радіус прямо тут
+                                className="rounded-xl"
                             >
                                 Вихід
                             </Button>
